@@ -1,0 +1,16 @@
+body{
+    background-color: wheat;
+}
+
+#Main-header h1{
+    text-align: center;
+    color: black;
+    font-weight: 100;
+    text-transform: capitalize;
+}
+#Main-footer{
+    text-align: center;
+    color: black;
+    font-weight: 100;
+    text-transform: capitalize;
+}

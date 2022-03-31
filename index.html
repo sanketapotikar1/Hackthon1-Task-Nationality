@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+    integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+
+    <!-- Stylesheet -->
+    <title>Nationalize API</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <header>
+            <!-- headings -->
+        <div class="container my-4" id="Main-header">
+            <h1>Welcome to Nationalize Checker</h1>
+        </div>
+
+        </header>
+        <nav>
+
+            <div class="container d-flex flex-column" id="header">
+                <div class="container" id="heading2">
+                    <h3>Predict Your Nationality.</h3>
+                    <p>Just type in your first name below and we will guess which country you are from.<br>
+                        <span class="badge badge-warning">Note: </span>&nbspDo not enter full name or a name separated by space.
+                    </p>
+            </div>
+
+            <!-- Single Name -->
+        <div class="container d-flex justify-content-center flex-column" id="subinfo1">
+            <form id="searchForm">
+
+                <!-- Inputbox -->
+                <div class="form-group">
+                    <label for="formGroupExampleInput">Provide Your First Name:-</label>
+                    <input type="text" class="form-control" id="searchName" placeholder="Enter Your Name">
+                </div>
+
+                <!-- Buttons -->
+                <button type="submit" class="btn btn-success mb-2">Submit</button>
+                <button type="reset" class="btn btn-danger mb-2 mx-2" onclick="Reset()">Reset</button>
+            </form>
+            <div class="container d-flex justify-content-start my-3" id="results"></div>
+
+        </div>
+
+         <!-- Multiple Names -->
+
+         <div class="container d-flex justify-content-center flex-column" id="subinfo2">
+            <br>
+            <h4>Predict Nationality For Multiple Names</h4>
+            <p>
+                <span class="badge badge-danger">Note: </span>
+                You can only get result for 10 names at a time<br>
+                Enter Names separated by comma ","
+            </p>
+
+            <form id="searchForm2">
+                <div class="form-group">
+                    <label for="formGroupExampleInput">Provide Multiple Names :-</label>
+                    <input type="text" class="form-control" id="searchName2"
+                        placeholder="For e.g. Sanket, Vaibhav, Harshal, Balaji">
+                </div>
+                <button type="submit" class="btn btn-success mb-2">Submit</button>
+                <button type="reset" class="btn btn-danger mb-2 mx-2" onclick="clear2()">Clear</button>
+            </form>
+
+        </div>
+        <div class="container d-flex justify-content-center my-3">
+            <div class="container d-flex flex-row flex-wrap" id="results2">
+
+            </div>
+        </div>
+
+        </nav>
+        <footer class="container my-4" id="Main-footer">
+            &#169 made by Sanket Apotikar 2022.
+        </footer>
+    </main>
+
+
+
+
+
+    <script src="script.js"></script>
+    
+</body>
+</html>
