@@ -41,8 +41,8 @@ function onFormSubmit(submit) {
                 `;
 
                 //To populate data within card
-                let listContainer = document.getElementById('listItems')
-                let listli = ""
+                let listContainer = document.getElementById('listItems');
+                let listli = "";
                 for (const key in data.country) {
                     restCountryData.forEach(element => {
                         if (element.alpha2Code === data.country[key].country_id) {
@@ -51,7 +51,7 @@ function onFormSubmit(submit) {
                     })
                 }
 
-                listContainer.innerHTML = listli
+                listContainer.innerHTML = listli;
 
             }
             printData(countryData);
@@ -64,33 +64,36 @@ function onFormSubmit(submit) {
 }
 
 function Reset() {
-    let result = document.getElementById('results')
-    result.innerHTML = " "
+    let result = document.getElementById('results');
+    result.innerHTML = " ";
 }
 
 
 //Searching for Multiple Names
 
-let submit2 = document.getElementById('searchForm2')
-submit2.addEventListener("submit", onFormSubmit2)
+let submit2 = document.getElementById('searchForm2');
+submit2.addEventListener("submit", onFormSubmit2);
 
 
 //When Form is Submitted
 function onFormSubmit2(submit) {
     submit.preventDefault();
 
-    let peopleNames = document.getElementById('searchName2').value.replace(/\s+/g, '').split(',')
+    let peopleNames = document.getElementById('searchName2').value.replace(/\s+/g, '').split(',');
+
+
+
     async function getCountryName2() {
         try {
             // Making url with String operation:
-            let str = ''
+            let str = '';
             for (let i = 0; i < peopleNames.length; i++) {
                 str += `name=${peopleNames[i]}&`
             }
-            let url = `https://api.nationalize.io?${str}`
+            let url = `https://api.nationalize.io?${str}`;
 
 
-            // Fetching the data
+            // Fetching the data from URL
             const response = await fetch(url);
             const countryData2 = await response.json();
             const res2 = await fetch(`https://restcountries.com/v2/all`)
@@ -102,6 +105,7 @@ function onFormSubmit2(submit) {
                 result2.innerHTML = ""
 
                 //To Populate cards for each persons data
+                
                 data.forEach((element, index) => {
                     result2.innerHTML += `
                     <div class="card my-3 mx-3" style="width: 18rem;">
