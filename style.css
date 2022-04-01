@@ -14,3 +14,83 @@ body{
     font-weight: 100;
     text-transform: capitalize;
 }
+
+.card{
+    text-align: center;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #EFC050;
+    margin: auto;
+    padding: 0;
+    border-radius: 18px;
+    border: 2px solid black;
+
+}
+
+.card:hover{
+    font-size:1.1em;
+    background-color: #92A8D1;
+}
+
+
+
+.card1{
+    text-align: center;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #EFC050;
+    margin:30px;
+    color: black;
+    border-radius: 18px;
+    border: 2px solid black;
+    
+
+}
+
+.card1:hover{
+    font-size:1.1em;
+    background-color: #92A8D1;
+}
+
+.card-subtitle{
+    font-size:1.2em;
+}
+
+p{
+    font: size 1em;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h4{
+    color:navy;
+    text-align: center;
+}
+
+h1{
+color:#34568B;
+font-weight:bold;
+font-family:Verdana, Geneva, Tahoma, sans-serif;
+text-align: center;
+}
+
+.guide{
+    color:red;
+}
+
+.submit-btn{
+   color:black;
+   float:left;
+   width:40%;
+}
+
+.reset-btn{
+    color:black;
+    float:right;
+    width:40%;
+    
+}
+
+label{
+    font: size 1.1em;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color:rgb(94, 36, 230)
+}

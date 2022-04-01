@@ -18,7 +18,7 @@
         <header>
             <!-- headings -->
         <div class="container my-4" id="Main-header">
-            <h1>Welcome to Nationalize Checker</h1>
+            <h1>Welcome to Nationality Predictor</h1>
         </div>
 
         </header>
@@ -26,10 +26,8 @@
 
             <div class="container d-flex flex-column" id="header">
                 <div class="container" id="heading2">
-                    <h3>Predict Your Nationality.</h3>
-                    <p>Just type in your first name below and we will guess which country you are from.<br>
-                        <span class="badge badge-warning">Note: </span>&nbspDo not enter full name or a name separated by space.
-                    </p>
+                    <h4>Predict Your Nationality for single Name</h4>
+                    <br>
             </div>
 
             <!-- Single Name -->
@@ -43,8 +41,8 @@
                 </div>
 
                 <!-- Buttons -->
-                <button type="submit" class="btn btn-success mb-2">Submit</button>
-                <button type="reset" class="btn btn-danger mb-2 mx-2" onclick="Reset()">Reset</button>
+                <button type="submit" class="btn btn-success mb-2 submit-btn">Submit</button>
+                <button type="reset" class="btn btn-danger mb-2 mx-2 reset-btn" onclick="Reset()">Reset</button>
             </form>
             <div class="container d-flex justify-content-start my-3" id="results"></div>
 
@@ -55,10 +53,8 @@
          <div class="container d-flex justify-content-center flex-column" id="subinfo2">
             <br>
             <h4>Predict Nationality For Multiple Names</h4>
-            <p>
-                <span class="badge badge-danger">Note: </span>
-                You can only get result for 10 names at a time<br>
-                Enter Names separated by comma ","
+            <p><br>
+                <span class="guide">Note : Please enter Names separated by comma ","</span>
             </p>
 
             <form id="searchForm2">
@@ -67,8 +63,8 @@
                     <input type="text" class="form-control" id="searchName2"
                         placeholder="For e.g. Sanket, Vaibhav, Harshal, Balaji">
                 </div>
-                <button type="submit" class="btn btn-success mb-2">Submit</button>
-                <button type="reset" class="btn btn-danger mb-2 mx-2" onclick="clear2()">Reset</button>
+                <button type="submit" class="btn btn-success mb-2 submit-btn">Submit</button>
+                <button type="reset" class="btn btn-danger mb-2 mx-2 reset-btn" onclick="clear2()">Reset</button>
             </form>
 
         </div>

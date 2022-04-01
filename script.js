@@ -1,7 +1,7 @@
 "use strict"; // Javascript Es-6 version
 
 
-// Searching for single name:
+// Searching for single name
 
 let submit = document.getElementById('searchForm');
 submit.addEventListener("submit", onFormSubmit);
@@ -46,7 +46,7 @@ function onFormSubmit(submit) {
                 for (const key in data.country) {
                     restCountryData.forEach(element => {
                         if (element.alpha2Code === data.country[key].country_id) {
-                            return listli += `<li class="list-group-item">Country Name: ${element.name}<br>Country Code: ${data.country[key].country_id}<br>Probability: ${(data.country[key].probability * 100).toFixed(2)}%</li>`;
+                            return listli += `Country Name: ${element.name}<br>Country Code: ${data.country[key].country_id}<br>Probability: ${(data.country[key].probability * 100).toFixed(2)}%`;
                         }
                     })
                 }
@@ -93,7 +93,7 @@ function onFormSubmit2(submit) {
             let url = `https://api.nationalize.io?${str}`;
 
 
-            // Fetching the data from URL
+            // Fetching the data from 
             const response = await fetch(url);
             const countryData2 = await response.json();
             const res2 = await fetch(`https://restcountries.com/v2/all`)
@@ -105,14 +105,18 @@ function onFormSubmit2(submit) {
                 result2.innerHTML = ""
 
                 //To Populate cards for each persons data
-                
                 data.forEach((element, index) => {
                     result2.innerHTML += `
-                    <div class="card my-3 mx-3" style="width: 18rem;">
-                      <div class="card-body">
+                    <div class="card1" style="width: 18rem;">
+                      <div class="card-header">
                         <h5 class="card-title">${element.name}</h5>
+                        <div class="card-header" >  
                         <h6 class="card-subtitle mb-2">Possible Nationalities</h6>
-                        <p class="card-text" id="${index}"></p>
+                        </div>
+                        <p class="card-text" id="${index}">
+                         <ul class="list-group list-group-flush" id="listItems">
+        
+                    </ul></p>
                       </div>
                     </div>
                     `
